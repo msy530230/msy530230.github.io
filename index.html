@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="misery">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://miserably.xyz/index.html">
 <meta property="og:site_name" content="misery">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -58,7 +58,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://miserably.xyz"></form>
       </div>
     </div>
   </div>
@@ -88,56 +88,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/29/sofa-bolt源码解析-入门篇/" data-id="cjizmqks600017c3m9xi4et5g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/29/hello-world/" class="article-date">
-  <time datetime="2018-06-29T06:45:38.000Z" itemprop="datePublished">2018-06-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="基础概念介绍"><a href="#基础概念介绍" class="headerlink" title="基础概念介绍"></a>基础概念介绍</h2><p><a href="https://mp.weixin.qq.com/s/JRsbK1Un2av9GKmJ8DK7IQ" target="_blank" rel="noopener">中文介绍文章</a></p>
+<p><em>以下为摘取部分内容</em></p>
+<h3 id="私有通信协议设计要点"><a href="#私有通信协议设计要点" class="headerlink" title="私有通信协议设计要点"></a>私有通信协议设计要点</h3><p> <img src="https://mmbiz.qpic.cn/mmbiz_png/nibOZpaQKw0ic4icG512uia2QH6weXT03vCuibnoPm44tgVnPcS4s8ulz0bj57m26smaE03vEBNjN5lout61rI20gvw/640" alt="私有协议内容"></p>
+<h5 id="Protocol"><a href="#Protocol" class="headerlink" title="Protocol"></a>Protocol</h5><ol>
+<li>传输内容要尽可能的少,所以要清晰需要哪些必要字段以及比较业务承载字段，避免出现无效字段</li>
+<li>需要考虑通信功能特性的支持：比如CRC校验，安全校验，数据压缩机制等</li>
+<li>需要考虑协议的可扩展性：充分评估现有业务的需求，设计一个通用，扩展性高的协议，避免经常对协议进行修改</li>
+<li>需要考虑协议的升级机制：毕竟是私有协议，没有长期的验证，字段新增或者修改，是有可能发生的，因此升级机制是必须考虑的，一般情况下可能是对应着存在一个版本的字段</li>
+</ol>
+<h5 id="Encoder-与-Decoder"><a href="#Encoder-与-Decoder" class="headerlink" title="Encoder 与 Decoder"></a>Encoder 与 Decoder</h5><p> 协议相关的编解码方式：私有协议需要有核心的encode与decode过程，并且针对业务负载能支持不同的序列化与反序列化机制。这部分，不同的私有协议，由于字段的差异，核心encode和decode过程是不一样的，因此需要分开考虑</p>
+<h5 id="Heartbeat"><a href="#Heartbeat" class="headerlink" title="Heartbeat"></a>Heartbeat</h5><p> 协议相关的心跳触发与处理：不同的协议对心跳的需求，处理逻辑也可能是不同的。因此心跳的触发逻辑，心跳的处理逻辑，也都需要单独考虑</p>
+<h5 id="Command-与-Command-Handler"><a href="#Command-与-Command-Handler" class="headerlink" title="Command 与 Command Handler"></a>Command 与 Command Handler</h5><p> 可扩展的命令与命令处理器管理</p>
+<ol>
+<li>负载命令：一般传输的业务的具体数据，比如带着请求参数，响应结果的命令</li>
+<li>控制命令：一些功能管理命令，心跳命令等，它们通常完成一些复杂的分布式跨节点的协调功能，以此来保证负载命令通信过程的稳定，是必不可少的一部分</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/29/hello-world/" data-id="cjizmqkrz00007c3mwy7xzsrc" class="article-share-link">Share</a>
+      <a data-url="http://miserably.xyz/2018/06/29/sofa-bolt源码解析-入门篇/" data-id="cjizqhcxp00005k3m01ny7gzr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,10 +150,6 @@
         
           <li>
             <a href="/2018/06/29/sofa-bolt源码解析-入门篇/">sofa-bolt源码解析-入门篇</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/29/hello-world/">Hello World</a>
           </li>
         
       </ul>
